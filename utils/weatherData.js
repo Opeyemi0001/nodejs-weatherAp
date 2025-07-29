@@ -1,8 +1,9 @@
+require('dotenv').config();
 const request = require("request");
 
 const openWeatherMap = {
   BASE_URL: "https://api.openweathermap.org/data/2.5/weather?q=",
-  SECRET_KEY: "c450e46b636504318cd73d3f4d511334",
+  SECRET_KEY: process.env.OPENWEATHER_API_KEY,
 };
 
 const weatherData = (address, callback) => {
